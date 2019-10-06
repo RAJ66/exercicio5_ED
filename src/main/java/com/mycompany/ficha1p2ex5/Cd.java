@@ -10,14 +10,28 @@ package com.mycompany.ficha1p2ex5;
  * @author vitor
  */
 public class Cd extends Media{
-    
-    public Cd(String autor) {
+    private int faixas; 
+
+    public Cd(int faixas, String autor) {
         super(autor);
+        this.faixas = faixas;
+    }
+
+    public int getFaixas() {
+        return faixas;
+    }
+
+    public void setFaixas(int faixas) {
+        this.faixas = faixas;
     }
 
     @Override
     public String toString() {
-        return "Cd: " + getAutor();
+        return "\nCd:" +"Autor: "+ getAutor() +" faixas:" + faixas ;
     }
+    
+   
+
+    
     
 }

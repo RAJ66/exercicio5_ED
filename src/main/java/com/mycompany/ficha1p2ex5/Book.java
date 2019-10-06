@@ -11,13 +11,26 @@ package com.mycompany.ficha1p2ex5;
  */
 public class Book extends Media{
     
-    public Book(String autor) {
+    private int paginas;
+
+    public Book(int paginas, String autor) {
         super(autor);
+        this.paginas = paginas;
     }
+
+    public int getPaginas() {
+        return paginas;
+    }
+
+    public void setPaginas(int paginas) {
+        this.paginas = paginas;
+    }
+    
+    
 
     @Override
     public String toString() {
-        return "Book:   " + getAutor();
+        return "\nBook:  Autor: " + getAutor()+" Paginas: "+paginas;
     }
     
 }

@@ -16,17 +16,28 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        Cd cd = new Cd("vitor");
-        Book bk = new Book("miguel");
-        Video vd = new Video("santos");
-        /*
-        Organizar<Media> teste = new Organizar<>();
-        teste.add(cd);
-        teste.add(bk);
-        teste.add(vd);
+        Cd cd1 = new Cd(12, "Latino House");
+        Book book1 = new Book(456, "Algoritmia e Estruturas de Dados");
+        Video video1 = new Video(12000, "Rocketman ");
 
-        System.out.println(teste.toString());
-        */
+        //Criaçao da livraria
+        Livraria<Media> teste = new Livraria<>();
+        //Teste de adicionar
+        teste.adicionar(cd1);
+        teste.adicionar(book1);
+        teste.adicionar(video1);
+        // teste de printar
+        System.out.println("Teste de adicinar:\n" + teste.toString());
+
+        //teste de remover
+        teste.removeItem(video1);
+        teste.removeIndex(0);
+        System.out.println("\n\nTeste de remover:\n" + teste.toString());
+        
+        
+        //teste de get
+        System.out.println("\n\nTeste de obter: "+teste.obterIndex(0));
+
     }
 
 }

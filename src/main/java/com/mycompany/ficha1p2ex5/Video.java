@@ -11,13 +11,25 @@ package com.mycompany.ficha1p2ex5;
  */
 public class Video extends Media{
     
-    public Video(String autor) {
+    private int duracao;
+
+    public Video(int duracao, String autor) {
         super(autor);
+        this.duracao = duracao;
     }
 
+    public int getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(int duracao) {
+        this.duracao = duracao;
+    }
+    
+   
     @Override
     public String toString() {
-        return "Video:  " + getAutor();
+        return "\nVideo: Autor: " + getAutor()+"Duracao: "+duracao;
     }
     
 }
